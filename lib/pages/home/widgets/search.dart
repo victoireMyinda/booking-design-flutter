@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotels/pages/home/home.dart';
 
 class Seacrh extends StatelessWidget {
   const Seacrh({super.key});
@@ -35,13 +36,30 @@ class Seacrh extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(width: 10),
             Container(
               height: 50,
-              width: 100,
-              color: Colors.green,
+              width: 50,
+              decoration: const BoxDecoration(
+                  color: Colors.green,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 5,
+                      offset: Offset(0, 4),
+                    )
+                  ],
+                  borderRadius: BorderRadius.all(Radius.circular(25))),
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Icon(Icons.search),
+                style: ElevatedButton.styleFrom(
+                    shape: const CircleBorder(), backgroundColor: dgreen),
+              ),
             ),
           ],
         ),
+        const SizedBox(height: 5),
         Container(
           height: 50,
           color: Colors.red,
