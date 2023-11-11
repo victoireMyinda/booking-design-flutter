@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-const dgreen = Color(0xFF54D3C2);
+import 'package:hotels/pages/home/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,13 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Hotels Booking",
-      home: Scaffold(
-        backgroundColor: dgreen,
-        appBar: AppBar(title: const Text("Page home")),
-      ),
+      home: HomeScreen(),
     );
   }
 }
