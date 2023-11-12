@@ -14,8 +14,8 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: dgreen,
       appBar: MyAppBar(),
       body: SingleChildScrollView(
-        child: Column(children: const [
-          Seacrh(),
+        child: Column(children: [
+          const Seacrh(),
           Hotel(),
         ]),
       ),

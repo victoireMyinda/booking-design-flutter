@@ -1,15 +1,49 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hotels/pages/home/home.dart';
+import 'package:hotels/pages/home/widgets/hotelcard.dart';
 
 class Hotel extends StatelessWidget {
-  const Hotel({super.key});
+  final List hotelList = [
+    {
+      'title': 'Grand roy hotel',
+      'place': 'webley, London',
+      'distance': 3,
+      'review': 15,
+      'image': 'images/hotel1.jpg',
+      'price': '180'
+    },
+    {
+      'title': 'Fleuve congo hotel',
+      'place': 'DRC, Kinshasa',
+      'distance': 3,
+      'review': 55,
+      'image': 'images/hotel2.jpg',
+      'price': '100'
+    },
+    {
+      'title': 'Grand hotel',
+      'place': 'Kinshasa',
+      'distance': 3,
+      'review': 15,
+      'image': 'images/hotel3.jpg',
+      'price': '110'
+    },
+    {
+      'title': 'Rotana',
+      'place': 'Kinshasa, Gombe',
+      'distance': 3,
+      'review': 40,
+      'image': 'images/hotel4.jpg',
+      'price': '100'
+    },
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      height: 2000,
+      height: 1300,
       color: Colors.white,
       child: Column(children: [
         Container(
@@ -35,6 +69,11 @@ class Hotel extends StatelessWidget {
             ],
           ),
         ),
+        Column(
+          children: hotelList.map((hotel) {
+            return HotelCard(hotel);
+          }).toList(),
+        )
       ]),
     );
   }
