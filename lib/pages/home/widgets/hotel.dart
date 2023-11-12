@@ -43,7 +43,7 @@ class Hotel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      height: 1300,
+      height: 1150,
       color: Colors.white,
       child: Column(children: [
         Container(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotels/pages/calendar/calendar.dart';
 import 'package:hotels/pages/home/home.dart';
 
 class Seacrh extends StatelessWidget {
@@ -52,7 +53,11 @@ class Seacrh extends StatelessWidget {
                   ],
                   borderRadius: BorderRadius.all(Radius.circular(25))),
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const CalendarScreen();
+                  }));
+                },
                 child: Icon(Icons.search, size: 26),
                 style: ElevatedButton.styleFrom(
                     shape: const CircleBorder(),
