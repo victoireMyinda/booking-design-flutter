@@ -142,7 +142,7 @@ class HotelCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 20),
                 Text(
                   hotelData['review'].toString() + ' reviews',
                   style: GoogleFonts.nunito(

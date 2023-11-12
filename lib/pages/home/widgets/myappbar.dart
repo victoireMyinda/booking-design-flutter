@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         onPressed: null,
       ),
       title: Text(
-        'Explorer',
+        'Hotels Booking',
         style: GoogleFonts.nunito(
             color: Colors.black, fontSize: 12, fontWeight: FontWeight.w800),
       ),
