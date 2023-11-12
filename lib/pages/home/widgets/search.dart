@@ -43,20 +43,26 @@ class Seacrh extends StatelessWidget {
               height: 50,
               width: 50,
               decoration: const BoxDecoration(
-                  color: Colors.green,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey,
-                      blurRadius: 5,
-                      offset: Offset(0, 4),
-                    )
-                  ],
-                  borderRadius: BorderRadius.all(Radius.circular(25))),
+                color: Colors.green,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 5,
+                    offset: Offset(0, 4),
+                  )
+                ],
+                borderRadius: BorderRadius.all(
+                  Radius.circular(25),
+                ),
+              ),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const CalendarScreen();
-                  }));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) {
+                      return const CalendarScreen();
+                    }),
+                  );
                 },
                 child: Icon(Icons.search, size: 26),
                 style: ElevatedButton.styleFrom(
