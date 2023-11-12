@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hotels/pages/home/home.dart';
 
 class Seacrh extends StatelessWidget {
@@ -7,7 +8,7 @@ class Seacrh extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140,
+      height: 150,
       color: Colors.grey[200],
       padding: const EdgeInsets.fromLTRB(10, 25, 10, 10),
       child: Column(children: [
@@ -52,17 +53,46 @@ class Seacrh extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(25))),
               child: ElevatedButton(
                 onPressed: () {},
-                child: Icon(Icons.search),
+                child: Icon(Icons.search, size: 26),
                 style: ElevatedButton.styleFrom(
-                    shape: const CircleBorder(), backgroundColor: dgreen),
+                    shape: const CircleBorder(),
+                    padding: const EdgeInsets.all(10),
+                    backgroundColor: dgreen),
               ),
             ),
           ],
         ),
         const SizedBox(height: 5),
-        Container(
-          height: 50,
-          color: Colors.red,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Choose date",
+                        style: GoogleFonts.nunito(
+                            color: Colors.grey, fontSize: 15)),
+                    Text("15 mai au 15 dec",
+                        style: GoogleFonts.nunito(
+                            color: Colors.black, fontSize: 17))
+                  ]),
+            ),
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Number of Rooms",
+                        style: GoogleFonts.nunito(
+                            color: Colors.grey, fontSize: 15)),
+                    Text("1 romm - 2 adults",
+                        style: GoogleFonts.nunito(
+                            color: Colors.black, fontSize: 17))
+                  ]),
+            ),
+          ],
         ),
       ]),
     );
